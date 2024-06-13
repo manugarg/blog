@@ -34,7 +34,7 @@ jobs:
 
       - name: Build pages
         run: |
-          hugo
+          hugo --gc --minify
           ls public
           cd public && git status
 
