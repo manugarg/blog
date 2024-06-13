@@ -1,0 +1,79 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about/ -&lt;h2 id="origin">Origin&lt;/h2>
+&lt;p>I started building Cloudprober in 2016, while I was at Google, leading the Cloud
+Networking SRE team there. Google Cloud was just beginning to grow big, and we
+were still grappling with some early growth issue. Our biggest problem was that
+our customers were discovering problems before us, which resulted in bad
+experience for our customers and huge time sink for my team in debugging those
+issues.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Google&amp;rsquo;s existing monitoring tools didn&amp;rsquo;t work well in Cloud, necessitating the
+need to build things from ground up. And since probers are the cornerstone of
+monitoring and reliability at Google&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>, that&amp;rsquo;s where we decided to start.
+&lt;em>Thus began the journey of Cloudprober&lt;/em>.&lt;/p>
+&lt;p>Even though the primary goal of Cloudprober at that time was to discover and
+alert on Cloud Networking availability and performance problems, we decided to
+develop it as a generic prober that could be used to monitor a wide variety of
+systems and services. We also decided to make Cloudprober open source so that a
+wider community could trust it, contribute to it, and run it on their own
+systems.&lt;/p>
+&lt;h2 id="scale-efficiency">Scale, Efficiency&lt;/h2>
+&lt;p>For scales as big as Google Cloud, horizontal scalability and efficiency become
+critical requirements, and for a monitoring software to be useful reliability is
+super important as well. Keeping these requirements in mind, our goal for
+Cloudprober was for it to be able to reliably monitor 100s of 1000s of endpoints
+(IPs, Ports, HTTP/S URLs, etc) from each instance, while keeping the resource
+requirements and management overhead very low&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Cloudprober maximizes resources utilization by relying heavily on Go concurrency
+(&lt;em>resource efficiency&lt;/em>), supports probing large number of targets in parallel at
+a high frequency (&lt;em>each instance does more&lt;/em>), minimizes the need of frequent
+updates by supporting dynamic targets discovery (&lt;em>ease of management&lt;/em>), has
+native implementations for common probe types (&lt;em>efficiency&lt;/em>), and so on.&lt;/p>
+&lt;h2 id="beyond-google-and-open-source">Beyond Google and Open-Source&lt;/h2>
+&lt;p>We
+&lt;a href="https://opensource.googleblog.com/2018/03/cloudprober-open-source-black-box.html">open-sourced&lt;/a>
+Cloudprober in 2017. That brought in a new phase in its evolution. We added many
+features over time to make it more useful to the wider community, such as
+first-class Kubernetes support, a built-in probe status UI, PostgreSQL and
+Cloudwatch surfacers, OAuth support, Validators, and most recently, built-in
+alerting capability.&lt;/p>
+&lt;p>We used the same codebase for the internal and open-source versions, which was
+more work but it created a huge advantage &amp;ndash; our own extensive internal
+deployment provided a continuous testing platform for Cloudprober, particularly
+for its scalability and performance aspects, while we added all these features.&lt;/p>
+&lt;h2 id="move-away-from-google-github">Move away from Google Github&lt;/h2>
+&lt;p>I left Google in Nov 2021. To keep working on Cloudprober independently, I moved
+Cloudprober&amp;rsquo;s Github repository from
+&lt;a href="https://github.com/google/cloudprober">github.com/google/cloudprober&lt;a>
+to
+&lt;a href="https://github.com/cloudprober/cloudprober">github.com/cloudprober/cloudprober&lt;/a>.
+This was a disruptive move and we lost a lot of Github stars in the process
+(1.4k - :smiley:), but overall it was a good move as Cloudprober has grown much
+faster after becoming independent.&lt;/p>
+&lt;p>While I can&amp;rsquo;t say this authoritatively now as I don&amp;rsquo;t work there anymore, from
+what I know, Google still uses Cloudprober, in fact, even more widely now.&lt;/p>
+&lt;h2 id="growth-and-stability">Growth and stability&lt;/h2>
+&lt;p>Throughout its journey, Cloudprober has continuously adapted and expanded to
+meet the evolving needs of its users&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>. To ensure that Cloudprober thrives and
+evolves robustly, we&amp;rsquo;ve been very diligent that it grows in a structured way, a
+commitment we&amp;rsquo;ll uphold in future as well.&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>A customer-reported infrastructure issue is much harder to debug than an
+issue discovered by your own monitoring.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Almost all of Google&amp;rsquo;s systems rely on probers to detect customer facing
+problems.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>Hostinger was able to probe 1.8M targets using a single instance:
+&lt;a href="https://www.hostinger.com/blog/cloudprober-explained-the-way-we-use-it-at-hostinger">blog&lt;/a>.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>I think it&amp;rsquo;s an essential trait for any software. Software that don&amp;rsquo;t evolve
+with time wither away.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div>
+- http://blog.manugarg.com/posts/about/ -</description></item></channel></rss>
