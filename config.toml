@@ -8,7 +8,6 @@ googleAnalytics = "G-WJGGB5EHFQ"
 unsafe = true
 
 [params]
-googleSearchCode = '83a141e3fe4224f63'
 enableGiscus = true
 
 [markup]
