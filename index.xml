@@ -1,4 +1,4 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about/ -&lt;h2 id="origin">Origin&lt;/h2>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about-cloudprober/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about-cloudprober/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about-cloudprober/ -&lt;h2 id="origin">Origin&lt;/h2>
 &lt;p>I started building Cloudprober in 2016, while I was at Google, leading the Cloud
 Networking SRE team there. Google Cloud was just beginning to grow big, and we
 were still grappling with some early growth issue. Our biggest problem was that
@@ -76,4 +76,4 @@ with time wither away.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" r
 &lt;/li>
 &lt;/ol>
 &lt;/div>
-- http://blog.manugarg.com/posts/about/ -</description></item></channel></rss>
+- http://blog.manugarg.com/posts/about-cloudprober/ -</description></item></channel></rss>
