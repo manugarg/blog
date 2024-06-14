@@ -2,9 +2,13 @@ baseURL = 'http://blog.manugarg.com/'
 languageCode = 'en-us'
 title = "Manu's Blog"
 theme = 'diary'
+googleAnalytics = "G-WJGGB5EHFQ"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[params]
+googleSearchCode = '83a141e3fe4224f63'
 
 [markup]
   [markup.highlight]
