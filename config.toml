@@ -9,6 +9,7 @@ unsafe = true
 
 [params]
 googleSearchCode = '83a141e3fe4224f63'
+enableGiscus = true
 
 [markup]
   [markup.highlight]
@@ -21,6 +22,21 @@ googleSearchCode = '83a141e3fe4224f63'
     noClasses = true
     style = "perldoc"
     tabWidth = 4
+
+# Generated at https://giscus.app/
+[params.giscus]
+  data_repo="manugarg/blog"
+  data_repo_id="R_kgDOMIFpRw"    
+  data_category="General"
+  data_category_id="DIC_kwDOMIFpR84CgCDt"
+  data_mapping="pathname"
+  data_strict="0"
+  data_reactions_enabled="1"
+  data_emit_metadata="0"
+  data_input_position="bottom"
+  data_theme="preferred_color_scheme"
+  data_lang="en"
+  crossorigin="anonymous"
 
 [[menu.main]]
 url = "/categories"
