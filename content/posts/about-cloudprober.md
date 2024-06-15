@@ -9,7 +9,7 @@ contributors: ["Manu Garg"]
 description: "I started building Cloudprober in 2016, while I was at Google, leading the Cloud
 Networking SRE team there. Google Cloud was just beginning to grow big, and we
 were still grappling with some early growth issue."
-categories: "Cloudprober"
+tags: ["Cloudprober", "Reliability", "SRE"]
 ---
 
 ## Origin

@@ -7,14 +7,13 @@ weight: 300
 date: 2024-06-05
 lastmod: 2024-06-11
 contributors: ["Manu Garg"]
-tags: ["Reliability", "SRE"]
+tags: ["Cloudprober", "Reliability", "SRE"]
 description:
   "What is a prober? Why do we need them? It baffled me somewhat that probers
   were not well known, let alone used, in most of the places I worked at after
   leaving Google in 2021. How was it possible that something that plays a vital
   role in reliability at Google and possibly other big techs, is not used more
   widely."
-categories: "Cloudprober"
 ---
 
 What is a prober? Why do we need them? It baffled me somewhat that probers were
@@ -50,19 +49,20 @@ are reasons for that:
 1. Probers see what customers see. Your monitoring agent, the prober, acts like
    a customer of yours and monitors for availability and performance
    regressions. If done right (more on this later), this is a very useful
-   monitoring mechanism.
+   monitoring setup.
 2. Probers provide a signal independent of the service implementation itself.
    You’re not relying on the service to export a specific metric or a log line.
    In other words, probers change independently of the service itself. This
-   decoupling is very useful, and in spirit similar to how auditors are usually
-   external to the entity being audited.
+   decoupling is very useful, and in spirit similar to how auditors are external
+   to the entity being audited.
 3. A corollary of the above point: probers stay stable over time. You can change
-   your service (a blackbox) from within as much as you like, but as long as
-   your interfaces stay the same, the probers don’t need to change.
+   your service (a blackbox from prober's point of view) from within as much as
+   you like, but as long as your interfaces stay the same, the probers don’t
+   need to change.
 
 Probers provide you a good controlled end-to-end monitoring setup, unaffected by
-a lot of other factors, like user network, service's status, business hours,
-etc. Probers don't cover everything but they provide a rock solid signal.
+a lot of other factors, like user network, service working correctly, business
+hours, etc. Probers don't cover everything but they provide a rock solid signal.
 
 ## What about other types of monitoring?
 
@@ -102,6 +102,15 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.
 | Closeness to the user?                                                        | Very Close                                          | Not close                | Super close but noisy                      |
 | Return on investment for monitoring: ongoing cost, reliability of signal, etc | High as ongoing cost is low and reliability is high | Moderate                 | Low                                        |
 
+## Tooling
+
+I'll have to write aother post to discuss tooling in detail, but you can't not
+go wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at
+Google, but grew in the world of open source (see [about
+cloudprober]({{< ref "about-cloudprober.md" >}})) and is used by many
+organizations now. Cloudprober offers a feature-rich and reliable probing
+solution.
+
 ## What do typical probers look like?
 
 Here are some of the probers use cases I’ve seen over the years:
@@ -113,7 +122,7 @@ Here are some of the probers use cases I’ve seen over the years:
 - HTTP probes for important properties like homepage, docs, etc.
 - gRPC requests to services.
 - Kubernetes components, e.g. kube-dns, availability testing.
-- DNS probing.
-- Database availability.
-- Object storage (S3/GCS) availability and performance
-- Complex workflows.
+- DNS probes to verify DNS.
+- Database availability checks.
+- Object storage (S3/GCS) availability and performance.
+- Workflow probers to verify complex user journeys.

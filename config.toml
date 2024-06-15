@@ -3,12 +3,15 @@ languageCode = 'en-us'
 title = "Manu's Blog"
 theme = 'diary'
 googleAnalytics = "G-WJGGB5EHFQ"
+enableEmoji = true
 
 [markup.goldmark.renderer]
 unsafe = true
 
 [params]
 enableGiscus = true
+enableReadingTime = true
+favicon = "/images/favicon/favicon.ico"
 
 [markup]
   [markup.highlight]
