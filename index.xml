@@ -1,4 +1,128 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about-cloudprober/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about-cloudprober/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about-cloudprober/ -&lt;h2 id="origin">Origin&lt;/h2>
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Why you need probers</title><link>http://blog.manugarg.com/posts/why-you-need-probers/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/why-you-need-probers/</guid><description>Manu's Blog http://blog.manugarg.com/posts/why-you-need-probers/ -&lt;p>What is a prober? Why do we need them? It baffled me somewhat that probers were
+not well known, let alone used, in most of the places I worked at after leaving
+Google in 2021. How was it possible that something that plays a vital role in
+reliability at Google and possibly other big techs, is not used more widely. You
+may not give any other credit to Google, but you can’t take “being reliable”
+away from them. Probers play a big part in ensuring that reliability. So why is
+this useful technology still mostly alien to most of the companies?&lt;/p>
+&lt;p>After spending a few years outside of Google, I believe now I know why. Probers
+require a non-trivial upfront investment, and benefits aren’t always obvious to
+someone who hasn’t experienced their benefits firsthand. Additionally, the lack
+of awareness and demand for probers means there aren’t many good off-the-shelf
+commercial solutions available. Most observability companies offer some kind of
+synthetic monitoring, which is similar to probers for the most part, but those
+options are often expensive and inadequate.&lt;/p>
+&lt;h2 id="what-is-a-prober">What is a prober?&lt;/h2>
+&lt;p>The basic idea behind probers is to monitor your service from the customer’s
+point of view. Probers do the same thing that your customers do, through the
+same interface, and verify it’s all working. This kind of monitoring is also
+called blackbox monitoring because you treat the system as a blackbox.&lt;/p>
+&lt;img src="http://blog.manugarg.com/images/what-is-prober.png" alt="what-is-prober" width="400" style="display: block;margin-left: auto;margin-right: auto;"/>
+&lt;h2 id="but-why">But, why?&lt;/h2>
+&lt;p>Probers are a very good indicator of whether things are working or not. There
+are reasons for that:&lt;/p>
+&lt;ol>
+&lt;li>Probers see what customers see. Your monitoring agent, the prober, acts like
+a customer of yours and monitors for availability and performance
+regressions. If done right (more on this later), this is a very useful
+monitoring setup.&lt;/li>
+&lt;li>Probers provide a signal independent of the service implementation itself.
+You’re not relying on the service to export a specific metric or a log line.
+In other words, probers change independently of the service itself. This
+decoupling is very useful, and in spirit similar to how auditors are external
+to the entity being audited.&lt;/li>
+&lt;li>A corollary of the above point: probers stay stable over time. You can change
+your service (a blackbox from prober&amp;rsquo;s point of view) from within as much as
+you like, but as long as your interfaces stay the same, the probers don’t
+need to change.&lt;/li>
+&lt;/ol>
+&lt;p>Probers provide you a good controlled end-to-end monitoring setup, unaffected by
+a lot of other factors, like user network, service working correctly, business
+hours, etc. Probers don&amp;rsquo;t cover everything but they provide a rock solid signal.&lt;/p>
+&lt;h2 id="what-about-other-types-of-monitoring">What about other types of monitoring?&lt;/h2>
+&lt;h3 id="service-metrics">Service Metrics&lt;/h3>
+&lt;p>Service metrics are what most organizations rely on today for monitoring.
+Service metrics are great, and the idea is not to replace them, but I’d argue
+that service metrics alone are not sufficient for the following reasons:&lt;/p>
+&lt;ul>
+&lt;li>Too close to the service being monitored. Often times, when a service is
+having an outage, it will also stop exporting useful data,&lt;/li>
+&lt;li>Dependency on the implementation. As implementation changes, metrics will need
+to be updated or you’ll have partial to no real monitoring left. You won’t
+believe how many times I’ve heard teams say – “we had monitoring but it was
+not configured correctly”.&lt;/li>
+&lt;li>Dependent on actual interactions to take place for service to detect errors.
+What if your service actually broke after the maintenance during the off hours
+but you won’t find it until users actually try to use the service.&lt;/li>
+&lt;/ul>
+&lt;h3 id="real-user-monitoring-rum">Real User Monitoring (RUM)&lt;/h3>
+&lt;p>Real user monitoring or client side monitoring is based on the signals generated
+by clients, browsers or apps. It takes you as close to the user as possible. but
+it suffers from two big issues: 1) Noise: Client side monitoring tends to be
+really noisy and depends on a lot of factors, like networking, user device,
+etc, 2) It still relies on users using the service first.&lt;/p>
+&lt;p>In practice, real user monitoring is good for debugging customer issues but it
+doesn’t provide a reliable monitoring signal that you can page yourself on.&lt;/p>
+&lt;h2 id="comparision-summary">Comparision Summary&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Probers&lt;/th>
+&lt;th>Service Metrics and Logs&lt;/th>
+&lt;th>Real User Monitoring&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Reliability of signal&lt;/td>
+&lt;td>High&lt;/td>
+&lt;td>Moderate&lt;/td>
+&lt;td>Low as signal is noisy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Initial ease and cost of implementation&lt;/td>
+&lt;td>Significant initial investment&lt;/td>
+&lt;td>Easy&lt;/td>
+&lt;td>Moderate to significant initial investment&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Closeness to the user?&lt;/td>
+&lt;td>Very Close&lt;/td>
+&lt;td>Not close&lt;/td>
+&lt;td>Super close but noisy&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Return on investment for monitoring: ongoing cost, reliability of signal, etc&lt;/td>
+&lt;td>High as ongoing cost is low and reliability is high&lt;/td>
+&lt;td>Moderate&lt;/td>
+&lt;td>Low&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="tooling">Tooling&lt;/h2>
+&lt;p>I&amp;rsquo;ll have to write aother post to discuss tooling in detail, but you can&amp;rsquo;t not
+go wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at
+Google, but grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
+cloudprober&lt;/a>) and is used by many
+organizations now. Cloudprober offers a feature-rich and reliable probing
+solution.&lt;/p>
+&lt;h2 id="what-do-typical-probers-look-like">What do typical probers look like?&lt;/h2>
+&lt;p>Here are some of the probers use cases I’ve seen over the years:&lt;/p>
+&lt;ul>
+&lt;li>Network connectivity and performance test between two endpoints. Endpoints can
+be internal or external, or over VPN.&lt;/li>
+&lt;li>TCP / UDP tests to ensure something is available or not available.&lt;/li>
+&lt;li>REST (HTTP) probes to APIs with or without Auth.&lt;/li>
+&lt;li>HTTP probes for important properties like homepage, docs, etc.&lt;/li>
+&lt;li>gRPC requests to services.&lt;/li>
+&lt;li>Kubernetes components, e.g. kube-dns, availability testing.&lt;/li>
+&lt;li>DNS probes to verify DNS.&lt;/li>
+&lt;li>Database availability checks.&lt;/li>
+&lt;li>Object storage (S3/GCS) availability and performance.&lt;/li>
+&lt;li>Workflow probers to verify complex user journeys.&lt;/li>
+&lt;/ul>
+- http://blog.manugarg.com/posts/why-you-need-probers/ -</description></item><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about-cloudprober/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about-cloudprober/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about-cloudprober/ -&lt;h2 id="origin">Origin&lt;/h2>
 &lt;p>I started building Cloudprober in 2016, while I was at Google, leading the Cloud
 Networking SRE team there. Google Cloud was just beginning to grow big, and we
 were still grappling with some early growth issue. Our biggest problem was that
