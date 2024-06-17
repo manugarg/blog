@@ -1,7 +1,7 @@
 ---
 title: "Why you need probers"
 lead: ""
-draft: true
+draft: false
 images: []
 weight: 300
 date: 2024-06-05
