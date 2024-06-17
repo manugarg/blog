@@ -22,16 +22,17 @@ not well known, let alone used, in most of the places I worked at after leaving
 Google in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
-away from them. Probers play a big part in ensuring that reliability. So why is
-this useful technology still mostly alien to most of the companies?
+away from them and probers play a big part in ensuring that reliability.
 
-After spending a few years outside of Google, I believe now I know why. Probers
-require a non-trivial upfront investment, and benefits aren’t always obvious to
-someone who hasn’t experienced their benefits firsthand. Additionally, the lack
-of awareness and demand for probers means there aren’t many good off-the-shelf
-commercial solutions available. Most observability companies offer some kind of
-synthetic monitoring, which is similar to probers for the most part, but those
-options are often expensive and inadequate.
+I believe now I've some understanding of why probers are not that popular:
+
+- Probers require a non-trivial upfront investment, and benefits aren’t always
+  obvious to someone who hasn’t experienced their benefits firsthand. It's hard
+  to invest in something that doesn't have immediate or obvious returns.
+- Additionally, the lack of awareness and demand for probers means there aren’t
+  many good off-the-shelf commercial solutions available. Most observability
+  companies offer some kind of synthetic monitoring, which is similar to probers
+  for the most part, but those options are often expensive and inadequate.
 
 ## What is a prober?
 
