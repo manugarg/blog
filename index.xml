@@ -118,12 +118,15 @@ be internal or external, or over VPN.&lt;/li>
 &lt;li>REST (HTTP) probes to APIs with or without Auth.&lt;/li>
 &lt;li>HTTP probes for important properties like homepage, docs, etc.&lt;/li>
 &lt;li>gRPC requests to services.&lt;/li>
-&lt;li>Kubernetes components, e.g. kube-dns, availability testing.&lt;/li>
-&lt;li>DNS probes to verify DNS.&lt;/li>
+&lt;li>Kubernetes components probes, e.g. probe to verify kube-dns.&lt;/li>
 &lt;li>Database availability checks.&lt;/li>
 &lt;li>Object storage (S3/GCS) availability and performance.&lt;/li>
 &lt;li>Workflow probers to verify complex user journeys.&lt;/li>
 &lt;/ul>
+&lt;p>If you&amp;rsquo;re new to probers, I hope this post gives you some idea of them, and for
+people who are already aware of probers, I&amp;rsquo;d love to know your reasons for using
+or not using probers. In future blog posts I&amp;rsquo;ll try to answer questions like
+what should you probe and how to write reliable workflow probes.&lt;/p>
 - http://blog.manugarg.com/posts/why-you-need-probers/ -</description></item><item><title>About Cloudprober</title><link>http://blog.manugarg.com/posts/about-cloudprober/</link><pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/about-cloudprober/</guid><description>Manu's Blog http://blog.manugarg.com/posts/about-cloudprober/ -&lt;h2 id="origin">Origin&lt;/h2>
 &lt;p>I started building Cloudprober in 2016, while I was at Google, leading the Cloud
 Networking SRE team there. Google Cloud was just beginning to grow big, and we
