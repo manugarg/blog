@@ -123,8 +123,12 @@ Here are some of the probers use cases I’ve seen over the years:
 - REST (HTTP) probes to APIs with or without Auth.
 - HTTP probes for important properties like homepage, docs, etc.
 - gRPC requests to services.
-- Kubernetes components, e.g. kube-dns, availability testing.
-- DNS probes to verify DNS.
+- Kubernetes components probes, e.g. probe to verify kube-dns.
 - Database availability checks.
 - Object storage (S3/GCS) availability and performance.
 - Workflow probers to verify complex user journeys.
+
+If you're new to probers, I hope this post gives you some idea of them, and for
+people who are already aware of probers, I'd love to know your reasons for using
+or not using probers. In future blog posts I'll try to answer questions like
+what should you probe and how to write reliable workflow probes.
