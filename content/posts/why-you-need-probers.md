@@ -128,6 +128,8 @@ Here are some of the probers use cases I’ve seen over the years:
 - Object storage (S3/GCS) availability and performance.
 - Workflow probers to verify complex user journeys.
 
+## Conclusion
+
 If you're new to probers, I hope this post gives you some idea of them, and for
 people who are already aware of probers, I'd love to know your reasons for using
 or not using probers. In future blog posts I'll try to answer questions like
