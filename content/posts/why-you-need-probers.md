@@ -128,9 +128,14 @@ Here are some of the probers use cases I’ve seen over the years:
 - Object storage (S3/GCS) availability and performance.
 - Workflow probers to verify complex user journeys.
 
-## Conclusion
+## Uptrend
 
-If you're new to probers, I hope this post gives you some idea of them, and for
-people who are already aware of probers, I'd love to know your reasons for using
-or not using probers. In future blog posts I'll try to answer questions like
-what should you probe and how to write reliable workflow probes.
+Even though probers are not very common, I believe their usage is picking up.
+More and more organizations are using [cloudprober](https://cloudprober.org)
+now. I hope this article makes things more clear and helps that trend further.
+In future blog posts I'll try to demystify more implementation related details,
+e.g., what you should probe and how to write reliable workflow probes.
+
+Join me on [LinkedIn](https://linkedin.com/in/manugarg) or
+[Cloudprober's Slack](https://join.slack.com/t/cloudprober/shared_invite/enQtNjA1OTkyOTk3ODc3LWQzZDM2ZWUyNTI0M2E4NmM4NTIyMjM5M2E0MDdjMmU1NGQ3NWNiMjU4NTViMWMyMjg0M2QwMDhkZGZjZmFlNGE)
+for further discussion on similar topics.
