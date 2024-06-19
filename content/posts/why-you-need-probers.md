@@ -5,7 +5,7 @@ draft: false
 images: []
 weight: 300
 date: 2024-06-05
-lastmod: 2024-06-16
+lastmod: 2024-06-18
 publishDate: 2024-06-17T07:00:00-07:00
 contributors: ["Manu Garg"]
 tags: ["Cloudprober", "Reliability", "SRE"]
@@ -122,11 +122,12 @@ Here are some of the probers use cases I’ve seen over the years:
 - TCP / UDP tests to ensure something is available or not available.
 - REST (HTTP) probes to APIs with or without Auth.
 - HTTP probes for important properties like homepage, docs, etc.
-- gRPC requests to services.
-- Kubernetes components probes, e.g. probe to verify kube-dns.
+- gRPC requests to internal and external services.
+- Kubernetes components checks, e.g., probe to verify kube-dns.
 - Database availability checks.
 - Object storage (S3/GCS) availability and performance.
-- Workflow probers to verify complex user journeys.
+- Workflow probers to verify complex user journeys, e.g., create a VM, verify
+  the connectivity to VM, destroy the VM.
 
 ## Uptrend
 
