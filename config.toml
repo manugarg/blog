@@ -41,10 +41,6 @@ favicon = "/images/favicon/favicon.ico"
   crossorigin="anonymous"
 
 [[menu.main]]
-url = "/tags"
-name = "Tags"
-weight = 2
-[[menu.main]]
-url = "/posts"
-name = "Archive"
-weight = 3
+url = "https://github.com/manugarg"
+name = "About Me"
+weight = 1
