@@ -24,7 +24,7 @@ reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.
 
-I believe now I've some understanding of why probers are not that popular:
+I think I now understand of why probers are not that popular:
 
 - Probers require a non-trivial upfront investment, and benefits aren’t always
   obvious to someone who hasn’t experienced their benefits firsthand. It's hard
@@ -106,12 +106,12 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.
 
 ## Tooling
 
-I'll have to write aother post to discuss tooling in detail, but I'd say you
-can't go wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at
-Google, but grew in the world of open source (see [about
+It will take aother post to discuss tooling in detail, but I'd say you can't go
+wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at Google,
+but grew in the world of open source (see [about
 cloudprober]({{< ref "about-cloudprober.md" >}})) and is used by many
-organizations now. Cloudprober offers a feature-rich and reliable probing
-solution.
+organizations now. Cloudprober offers a feature-rich, reliable, and extensible
+probing solution.
 
 ## What do typical probers look like?
 
@@ -119,11 +119,11 @@ Here are some of the probers use cases I’ve seen over the years:
 
 - Network connectivity and performance test between two endpoints. Endpoints can
   be internal or external, or over VPN.
-- TCP / UDP tests to ensure something is available or not available.
-- REST (HTTP) probes to APIs with or without Auth.
-- HTTP probes for important properties like homepage, docs, etc.
+- TCP / UDP checks to ensure something is available or not available.
+- REST (HTTP) API probes, with or without Auth.
+- HTTP probes for important properties like organization website, docs, etc.
 - gRPC requests to internal and external services.
-- Kubernetes components checks, e.g., probe to verify kube-dns.
+- Kubernetes components checks, e.g., probe to verify kube-dns, pod networking.
 - Database availability checks.
 - Object storage (S3/GCS) availability and performance.
 - Workflow probers to verify complex user journeys, e.g., create a VM, verify
@@ -131,11 +131,12 @@ Here are some of the probers use cases I’ve seen over the years:
 
 ## Uptrend
 
-Even though probers are not very common, I believe their usage is picking up.
-More and more organizations are using [cloudprober](https://cloudprober.org)
-now. I hope this article makes things more clear and helps that trend further.
-In future blog posts I'll try to demystify more implementation related details,
-e.g., what you should probe and how to write reliable workflow probes.
+Even though probers are not very common, their usage seems to be picking up.
+More and more organizations are using cloudprober now (see list
+[here](https://cloudprober.org)). I hope this article makes things more clear
+and helps that trend further. In future blog posts I'll try to demystify more
+implementation related details, e.g., what you should probe and how to write
+reliable workflow probes.
 
 Join me on [LinkedIn](https://linkedin.com/in/manugarg) or
 [Cloudprober's Slack](https://join.slack.com/t/cloudprober/shared_invite/enQtNjA1OTkyOTk3ODc3LWQzZDM2ZWUyNTI0M2E4NmM4NTIyMjM5M2E0MDdjMmU1NGQ3NWNiMjU4NTViMWMyMjg0M2QwMDhkZGZjZmFlNGE)
