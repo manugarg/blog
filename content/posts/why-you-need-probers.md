@@ -106,8 +106,8 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.
 
 ## Tooling
 
-I'll have to write aother post to discuss tooling in detail, but you can't not
-go wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at
+I'll have to write aother post to discuss tooling in detail, but I'd say you
+can't go wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at
 Google, but grew in the world of open source (see [about
 cloudprober]({{< ref "about-cloudprober.md" >}})) and is used by many
 organizations now. Cloudprober offers a feature-rich and reliable probing
