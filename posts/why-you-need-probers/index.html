@@ -14,12 +14,12 @@
 &nbsp;
 <i class=material-icons>schedule</i>
 4 min
-25 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me somewhat that probers were
+26 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me somewhat that probers were
 not well known, let alone used, in most of the places I worked at after leaving
 Google in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
-away from them and probers play a big part in ensuring that reliability.</p><p>I believe now I&rsquo;ve some understanding of why probers are not that popular:</p><ul><li>Probers require a non-trivial upfront investment, and benefits aren’t always
+away from them and probers play a big part in ensuring that reliability.</p><p>I think I now understand of why probers are not that popular:</p><ul><li>Probers require a non-trivial upfront investment, and benefits aren’t always
 obvious to someone who hasn’t experienced their benefits firsthand. It&rsquo;s hard
 to invest in something that doesn&rsquo;t have immediate or obvious returns.</li><li>Additionally, the lack of awareness and demand for probers means there aren’t
 many good off-the-shelf commercial solutions available. Most observability
@@ -53,18 +53,19 @@ by clients, browsers or apps. It takes you as close to the user as possible. but
 it suffers from two big issues: 1) Noise: Client side monitoring tends to be
 really noisy and depends on a lot of factors, like networking, user device,
 etc, 2) It still relies on users using the service first.</p><p>In practice, real user monitoring is good for debugging customer issues but it
-doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparision-summary>Comparision Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>I&rsquo;ll have to write aother post to discuss tooling in detail, but I&rsquo;d say you
-can&rsquo;t go wrong with <a href=https://cloudprober.org>Cloudprober</a> &#x1f609;. It started at
-Google, but grew in the world of open source (see <a href=http://blog.manugarg.com/posts/about-cloudprober/>about
+doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparision-summary>Comparision Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>It will take aother post to discuss tooling in detail, but I&rsquo;d say you can&rsquo;t go
+wrong with <a href=https://cloudprober.org>Cloudprober</a> &#x1f609;. It started at Google,
+but grew in the world of open source (see <a href=http://blog.manugarg.com/posts/about-cloudprober/>about
 cloudprober</a>) and is used by many
-organizations now. Cloudprober offers a feature-rich and reliable probing
-solution.</p><h2 id=what-do-typical-probers-look-like>What do typical probers look like?</h2><p>Here are some of the probers use cases I’ve seen over the years:</p><ul><li>Network connectivity and performance test between two endpoints. Endpoints can
-be internal or external, or over VPN.</li><li>TCP / UDP tests to ensure something is available or not available.</li><li>REST (HTTP) probes to APIs with or without Auth.</li><li>HTTP probes for important properties like homepage, docs, etc.</li><li>gRPC requests to internal and external services.</li><li>Kubernetes components checks, e.g., probe to verify kube-dns.</li><li>Database availability checks.</li><li>Object storage (S3/GCS) availability and performance.</li><li>Workflow probers to verify complex user journeys, e.g., create a VM, verify
-the connectivity to VM, destroy the VM.</li></ul><h2 id=uptrend>Uptrend</h2><p>Even though probers are not very common, I believe their usage is picking up.
-More and more organizations are using <a href=https://cloudprober.org>cloudprober</a>
-now. I hope this article makes things more clear and helps that trend further.
-In future blog posts I&rsquo;ll try to demystify more implementation related details,
-e.g., what you should probe and how to write reliable workflow probes.</p><p>Join me on <a href=https://linkedin.com/in/manugarg>LinkedIn</a> or
+organizations now. Cloudprober offers a feature-rich, reliable, and extensible
+probing solution.</p><h2 id=what-do-typical-probers-look-like>What do typical probers look like?</h2><p>Here are some of the probers use cases I’ve seen over the years:</p><ul><li>Network connectivity and performance test between two endpoints. Endpoints can
+be internal or external, or over VPN.</li><li>TCP / UDP checks to ensure something is available or not available.</li><li>REST (HTTP) API probes, with or without Auth.</li><li>HTTP probes for important properties like organization website, docs, etc.</li><li>gRPC requests to internal and external services.</li><li>Kubernetes components checks, e.g., probe to verify kube-dns, pod networking.</li><li>Database availability checks.</li><li>Object storage (S3/GCS) availability and performance.</li><li>Workflow probers to verify complex user journeys, e.g., create a VM, verify
+the connectivity to VM, destroy the VM.</li></ul><h2 id=uptrend>Uptrend</h2><p>Even though probers are not very common, their usage seems to be picking up.
+More and more organizations are using cloudprober now (see list
+<a href=https://cloudprober.org>here</a>). I hope this article makes things more clear
+and helps that trend further. In future blog posts I&rsquo;ll try to demystify more
+implementation related details, e.g., what you should probe and how to write
+reliable workflow probes.</p><p>Join me on <a href=https://linkedin.com/in/manugarg>LinkedIn</a> or
 <a href=https://join.slack.com/t/cloudprober/shared_invite/enQtNjA1OTkyOTk3ODc3LWQzZDM2ZWUyNTI0M2E4NmM4NTIyMjM5M2E0MDdjMmU1NGQ3NWNiMjU4NTViMWMyMjg0M2QwMDhkZGZjZmFlNGE>Cloudprober&rsquo;s Slack</a>
 for further discussion on similar topics.</p><hr width=100% id=EOF><p style=color:#777>Last modified on 2024-06-18</p></div></div><nav class=post-pagination><a class=newer-posts>Next<br>No newer posts.
 </a><a class=older-posts href=/posts/about-cloudprober/>Previous<br>About Cloudprober</a></nav><div class=post-comment-wrapper><script src=https://giscus.app/client.js data-repo=manugarg/blog data-repo-id=R_kgDOMIFpRw data-category=General data-category-id=DIC_kwDOMIFpR84CgCDt data-mapping=title data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=preferred_color_scheme data-lang=en crossorigin=anonymous async></script></div></div></div></div></div><div id=sideContainer class=side-container><a class="a-block nav-head false" href=http://blog.manugarg.com/><div class=nav-title>Manu's Blog</div></a><div class=nav-link-list><a class="a-block nav-link-item false" href=https://github.com/manugarg>About Me</a></div><div class=nav-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://risehere.net/>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
