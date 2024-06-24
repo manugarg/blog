@@ -4,7 +4,7 @@ Google in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.&lt;/p>
-&lt;p>I believe now I&amp;rsquo;ve some understanding of why probers are not that popular:&lt;/p>
+&lt;p>I think I now understand of why probers are not that popular:&lt;/p>
 &lt;ul>
 &lt;li>Probers require a non-trivial upfront investment, and benefits aren’t always
 obvious to someone who hasn’t experienced their benefits firsthand. It&amp;rsquo;s hard
@@ -103,33 +103,34 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.&lt
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="tooling">Tooling&lt;/h2>
-&lt;p>I&amp;rsquo;ll have to write aother post to discuss tooling in detail, but I&amp;rsquo;d say you
-can&amp;rsquo;t go wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at
-Google, but grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
+&lt;p>It will take aother post to discuss tooling in detail, but I&amp;rsquo;d say you can&amp;rsquo;t go
+wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at Google,
+but grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
 cloudprober&lt;/a>) and is used by many
-organizations now. Cloudprober offers a feature-rich and reliable probing
-solution.&lt;/p>
+organizations now. Cloudprober offers a feature-rich, reliable, and extensible
+probing solution.&lt;/p>
 &lt;h2 id="what-do-typical-probers-look-like">What do typical probers look like?&lt;/h2>
 &lt;p>Here are some of the probers use cases I’ve seen over the years:&lt;/p>
 &lt;ul>
 &lt;li>Network connectivity and performance test between two endpoints. Endpoints can
 be internal or external, or over VPN.&lt;/li>
-&lt;li>TCP / UDP tests to ensure something is available or not available.&lt;/li>
-&lt;li>REST (HTTP) probes to APIs with or without Auth.&lt;/li>
-&lt;li>HTTP probes for important properties like homepage, docs, etc.&lt;/li>
+&lt;li>TCP / UDP checks to ensure something is available or not available.&lt;/li>
+&lt;li>REST (HTTP) API probes, with or without Auth.&lt;/li>
+&lt;li>HTTP probes for important properties like organization website, docs, etc.&lt;/li>
 &lt;li>gRPC requests to internal and external services.&lt;/li>
-&lt;li>Kubernetes components checks, e.g., probe to verify kube-dns.&lt;/li>
+&lt;li>Kubernetes components checks, e.g., probe to verify kube-dns, pod networking.&lt;/li>
 &lt;li>Database availability checks.&lt;/li>
 &lt;li>Object storage (S3/GCS) availability and performance.&lt;/li>
 &lt;li>Workflow probers to verify complex user journeys, e.g., create a VM, verify
 the connectivity to VM, destroy the VM.&lt;/li>
 &lt;/ul>
 &lt;h2 id="uptrend">Uptrend&lt;/h2>
-&lt;p>Even though probers are not very common, I believe their usage is picking up.
-More and more organizations are using &lt;a href="https://cloudprober.org">cloudprober&lt;/a>
-now. I hope this article makes things more clear and helps that trend further.
-In future blog posts I&amp;rsquo;ll try to demystify more implementation related details,
-e.g., what you should probe and how to write reliable workflow probes.&lt;/p>
+&lt;p>Even though probers are not very common, their usage seems to be picking up.
+More and more organizations are using cloudprober now (see list
+&lt;a href="https://cloudprober.org">here&lt;/a>). I hope this article makes things more clear
+and helps that trend further. In future blog posts I&amp;rsquo;ll try to demystify more
+implementation related details, e.g., what you should probe and how to write
+reliable workflow probes.&lt;/p>
 &lt;p>Join me on &lt;a href="https://linkedin.com/in/manugarg">LinkedIn&lt;/a> or
 &lt;a href="https://join.slack.com/t/cloudprober/shared_invite/enQtNjA1OTkyOTk3ODc3LWQzZDM2ZWUyNTI0M2E4NmM4NTIyMjM5M2E0MDdjMmU1NGQ3NWNiMjU4NTViMWMyMjg0M2QwMDhkZGZjZmFlNGE">Cloudprober&amp;rsquo;s Slack&lt;/a>
 for further discussion on similar topics.&lt;/p>
