@@ -103,8 +103,8 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.&lt
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="tooling">Tooling&lt;/h2>
-&lt;p>I&amp;rsquo;ll have to write aother post to discuss tooling in detail, but you can&amp;rsquo;t not
-go wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at
+&lt;p>I&amp;rsquo;ll have to write aother post to discuss tooling in detail, but I&amp;rsquo;d say you
+can&amp;rsquo;t go wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at
 Google, but grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
 cloudprober&lt;/a>) and is used by many
 organizations now. Cloudprober offers a feature-rich and reliable probing

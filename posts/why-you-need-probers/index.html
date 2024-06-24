@@ -14,7 +14,7 @@
 &nbsp;
 <i class=material-icons>schedule</i>
 4 min
-24 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me somewhat that probers were
+25 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me somewhat that probers were
 not well known, let alone used, in most of the places I worked at after leaving
 Google in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
@@ -53,8 +53,8 @@ by clients, browsers or apps. It takes you as close to the user as possible. but
 it suffers from two big issues: 1) Noise: Client side monitoring tends to be
 really noisy and depends on a lot of factors, like networking, user device,
 etc, 2) It still relies on users using the service first.</p><p>In practice, real user monitoring is good for debugging customer issues but it
-doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparision-summary>Comparision Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>I&rsquo;ll have to write aother post to discuss tooling in detail, but you can&rsquo;t not
-go wrong with <a href=https://cloudprober.org>Cloudprober</a> &#x1f609;. It started at
+doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparision-summary>Comparision Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>I&rsquo;ll have to write aother post to discuss tooling in detail, but I&rsquo;d say you
+can&rsquo;t go wrong with <a href=https://cloudprober.org>Cloudprober</a> &#x1f609;. It started at
 Google, but grew in the world of open source (see <a href=http://blog.manugarg.com/posts/about-cloudprober/>about
 cloudprober</a>) and is used by many
 organizations now. Cloudprober offers a feature-rich and reliable probing
