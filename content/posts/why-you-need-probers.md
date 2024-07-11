@@ -5,7 +5,7 @@ draft: false
 images: []
 weight: 300
 date: 2024-06-05
-lastmod: 2024-06-18
+lastmod: 2024-07-10
 publishDate: 2024-06-17T07:00:00-07:00
 contributors: ["Manu Garg"]
 tags: ["Cloudprober", "Reliability", "SRE"]
@@ -107,11 +107,11 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.
 ## Tooling
 
 It will take aother post to discuss tooling in detail, but I'd say you can't go
-wrong with [Cloudprober](https://cloudprober.org) :wink:. It started at Google,
-but grew in the world of open source (see [about
+wrong with [Cloudprober](https://cloudprober.org) ;). It started at Google, grew
+in the world of open source (see [about
 cloudprober]({{< ref "about-cloudprober.md" >}})) and is used by many
-organizations now. Cloudprober offers a feature-rich, reliable, and extensible
-probing solution.
+organizations of all sizes now. Cloudprober offers a feature-rich, reliable and
+extensible probing solution.
 
 ## What do typical probers look like?
 
