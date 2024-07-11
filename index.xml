@@ -104,11 +104,11 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.&lt
 &lt;/table>
 &lt;h2 id="tooling">Tooling&lt;/h2>
 &lt;p>It will take aother post to discuss tooling in detail, but I&amp;rsquo;d say you can&amp;rsquo;t go
-wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> &amp;#x1f609;. It started at Google,
-but grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
+wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> ;). It started at Google, grew
+in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
 cloudprober&lt;/a>) and is used by many
-organizations now. Cloudprober offers a feature-rich, reliable, and extensible
-probing solution.&lt;/p>
+organizations of all sizes now. Cloudprober offers a feature-rich, reliable and
+extensible probing solution.&lt;/p>
 &lt;h2 id="what-do-typical-probers-look-like">What do typical probers look like?&lt;/h2>
 &lt;p>Here are some of the probers use cases I’ve seen over the years:&lt;/p>
 &lt;ul>
