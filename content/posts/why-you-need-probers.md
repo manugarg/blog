@@ -45,7 +45,7 @@ called blackbox monitoring because you treat the system as a blackbox.
 
 ## But, why?
 
-Probers are a very good indicator of whether things are working or not. There
+Probers are a really good indicator of whether things are working or not. There
 are reasons for that:
 
 1. Probers see what customers see. Your monitoring agent, the prober, acts like
