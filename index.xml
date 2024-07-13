@@ -21,7 +21,7 @@ same interface, and verify it’s all working. This kind of monitoring is also
 called blackbox monitoring because you treat the system as a blackbox.&lt;/p>
 &lt;img src="http://blog.manugarg.com/images/what-is-prober.png" alt="what-is-prober" width="400" style="display: block;margin-left: auto;margin-right: auto;"/>
 &lt;h2 id="but-why">But, why?&lt;/h2>
-&lt;p>Probers are a very good indicator of whether things are working or not. There
+&lt;p>Probers are a really good indicator of whether things are working or not. There
 are reasons for that:&lt;/p>
 &lt;ol>
 &lt;li>Probers see what customers see. Your monitoring agent, the prober, acts like
