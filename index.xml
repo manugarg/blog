@@ -4,7 +4,7 @@ Google in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.&lt;/p>
-&lt;p>I think I now understand of why probers are not that popular:&lt;/p>
+&lt;p>I think I now understand why probers are not that popular:&lt;/p>
 &lt;ul>
 &lt;li>Probers require a non-trivial upfront investment, and benefits aren’t always
 obvious to someone who hasn’t experienced their benefits firsthand. It&amp;rsquo;s hard
@@ -65,7 +65,7 @@ really noisy and depends on a lot of factors, like networking, user device,
 etc, 2) It still relies on users using the service first.&lt;/p>
 &lt;p>In practice, real user monitoring is good for debugging customer issues but it
 doesn’t provide a reliable monitoring signal that you can page yourself on.&lt;/p>
-&lt;h2 id="comparision-summary">Comparision Summary&lt;/h2>
+&lt;h2 id="comparison-summary">Comparison Summary&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
