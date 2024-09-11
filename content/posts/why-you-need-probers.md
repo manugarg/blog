@@ -24,7 +24,7 @@ reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.
 
-I think I now understand of why probers are not that popular:
+I think I now understand why probers are not that popular:
 
 - Probers require a non-trivial upfront investment, and benefits aren’t always
   obvious to someone who hasn’t experienced their benefits firsthand. It's hard
@@ -95,7 +95,7 @@ etc, 2) It still relies on users using the service first.
 In practice, real user monitoring is good for debugging customer issues but it
 doesn’t provide a reliable monitoring signal that you can page yourself on.
 
-## Comparision Summary
+## Comparison Summary
 
 |                                                                               | Probers                                             | Service Metrics and Logs | Real User Monitoring                       |
 | ----------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------ | ------------------------------------------ |
