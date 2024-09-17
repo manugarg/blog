@@ -14,12 +14,12 @@
 &nbsp;
 <i class=material-icons>schedule</i>
 4 min
-26 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me somewhat that probers were
-not well known, let alone used, in most of the places I worked at after leaving
-Google in 2021. How was it possible that something that plays a vital role in
+27 s.</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><p>What is a prober? Why do we need them? It baffled me that probers were hardly
+known, let alone used, in most of the places I worked at after leaving Google
+in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
-away from them and probers play a big part in ensuring that reliability.</p><p>I think I now understand why probers are not that popular:</p><ul><li>Probers require a non-trivial upfront investment, and benefits aren’t always
+away from them and probers play a big part in ensuring that reliability.</p><p>I think I now understand why probers are not as popular as they should be:</p><ul><li>Probers require a non-trivial upfront investment, and benefits aren’t always
 obvious to someone who hasn’t experienced their benefits firsthand. It&rsquo;s hard
 to invest in something that doesn&rsquo;t have immediate or obvious returns.</li><li>Additionally, the lack of awareness and demand for probers means there aren’t
 many good off-the-shelf commercial solutions available. Most observability
@@ -53,9 +53,9 @@ by clients, browsers or apps. It takes you as close to the user as possible. but
 it suffers from two big issues: 1) Noise: Client side monitoring tends to be
 really noisy and depends on a lot of factors, like networking, user device,
 etc, 2) It still relies on users using the service first.</p><p>In practice, real user monitoring is good for debugging customer issues but it
-doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparison-summary>Comparison Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>It will take another post to discuss tooling in detail, but I&rsquo;d say you can&rsquo;t go
-wrong with <a href=https://cloudprober.org>Cloudprober</a> ;). It started at Google, grew
-in the world of open source (see <a href=http://blog.manugarg.com/posts/about-cloudprober/>about
+doesn’t provide a reliable monitoring signal that you can page yourself on.</p><h2 id=comparison-summary>Comparison Summary</h2><table><thead><tr><th></th><th>Probers</th><th>Service Metrics and Logs</th><th>Real User Monitoring</th></tr></thead><tbody><tr><td>Reliability of signal</td><td>High</td><td>Moderate</td><td>Low as signal is noisy</td></tr><tr><td>Initial ease and cost of implementation</td><td>Significant initial investment</td><td>Easy</td><td>Moderate to significant initial investment</td></tr><tr><td>Closeness to the user?</td><td>Very Close</td><td>Not close</td><td>Super close but noisy</td></tr><tr><td>Return on investment for monitoring: ongoing cost, reliability of signal, etc</td><td>High as ongoing cost is low and reliability is high</td><td>Moderate</td><td>Low</td></tr></tbody></table><h2 id=tooling>Tooling</h2><p>It will take another post to discuss tooling in detail, but I&rsquo;d say this - you
+can&rsquo;t go wrong with <a href=https://cloudprober.org>Cloudprober</a> ;). It started at
+Google, grew in the world of open source (see <a href=http://blog.manugarg.com/posts/about-cloudprober/>about
 cloudprober</a>) and is used by many
 organizations of all sizes now. Cloudprober offers a feature-rich, reliable and
 extensible probing solution.</p><h2 id=what-do-typical-probers-look-like>What do typical probers look like?</h2><p>Here are some of the probers use cases I’ve seen over the years:</p><ul><li>Network connectivity and performance test between two endpoints. Endpoints can

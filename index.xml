@@ -1,10 +1,10 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Why you need probers</title><link>http://blog.manugarg.com/posts/why-you-need-probers/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/why-you-need-probers/</guid><description>Manu's Blog http://blog.manugarg.com/posts/why-you-need-probers/ -&lt;p>What is a prober? Why do we need them? It baffled me somewhat that probers were
-not well known, let alone used, in most of the places I worked at after leaving
-Google in 2021. How was it possible that something that plays a vital role in
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manu's Blog</title><link>http://blog.manugarg.com/</link><description>Recent content on Manu's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.manugarg.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Why you need probers</title><link>http://blog.manugarg.com/posts/why-you-need-probers/</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate><guid>http://blog.manugarg.com/posts/why-you-need-probers/</guid><description>Manu's Blog http://blog.manugarg.com/posts/why-you-need-probers/ -&lt;p>What is a prober? Why do we need them? It baffled me that probers were hardly
+known, let alone used, in most of the places I worked at after leaving Google
+in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.&lt;/p>
-&lt;p>I think I now understand why probers are not that popular:&lt;/p>
+&lt;p>I think I now understand why probers are not as popular as they should be:&lt;/p>
 &lt;ul>
 &lt;li>Probers require a non-trivial upfront investment, and benefits aren’t always
 obvious to someone who hasn’t experienced their benefits firsthand. It&amp;rsquo;s hard
@@ -103,9 +103,9 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.&lt
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="tooling">Tooling&lt;/h2>
-&lt;p>It will take another post to discuss tooling in detail, but I&amp;rsquo;d say you can&amp;rsquo;t go
-wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> ;). It started at Google, grew
-in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
+&lt;p>It will take another post to discuss tooling in detail, but I&amp;rsquo;d say this - you
+can&amp;rsquo;t go wrong with &lt;a href="https://cloudprober.org">Cloudprober&lt;/a> ;). It started at
+Google, grew in the world of open source (see &lt;a href="http://blog.manugarg.com/posts/about-cloudprober/">about
 cloudprober&lt;/a>) and is used by many
 organizations of all sizes now. Cloudprober offers a feature-rich, reliable and
 extensible probing solution.&lt;/p>
