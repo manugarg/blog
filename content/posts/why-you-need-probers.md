@@ -17,14 +17,14 @@ description:
   widely."
 ---
 
-What is a prober? Why do we need them? It baffled me somewhat that probers were
-not well known, let alone used, in most of the places I worked at after leaving
-Google in 2021. How was it possible that something that plays a vital role in
+What is a prober? Why do we need them? It baffled me that probers were hardly
+known, let alone used, in most of the places I worked at after leaving Google
+in 2021. How was it possible that something that plays a vital role in
 reliability at Google and possibly other big techs, is not used more widely. You
 may not give any other credit to Google, but you can’t take “being reliable”
 away from them and probers play a big part in ensuring that reliability.
 
-I think I now understand why probers are not that popular:
+I think I now understand why probers are not as popular as they should be:
 
 - Probers require a non-trivial upfront investment, and benefits aren’t always
   obvious to someone who hasn’t experienced their benefits firsthand. It's hard
@@ -106,9 +106,9 @@ doesn’t provide a reliable monitoring signal that you can page yourself on.
 
 ## Tooling
 
-It will take another post to discuss tooling in detail, but I'd say you can't go
-wrong with [Cloudprober](https://cloudprober.org) ;). It started at Google, grew
-in the world of open source (see [about
+It will take another post to discuss tooling in detail, but I'd say this - you
+can't go wrong with [Cloudprober](https://cloudprober.org) ;). It started at
+Google, grew in the world of open source (see [about
 cloudprober]({{< ref "about-cloudprober.md" >}})) and is used by many
 organizations of all sizes now. Cloudprober offers a feature-rich, reliable and
 extensible probing solution.
